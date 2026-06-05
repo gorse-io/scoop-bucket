@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "description": "Go assembly transpiler for C programming languages.",
+    "homepage": "https://github.com/gorse-io/goat",
+    "license": "Apache-2.0",
+    "depends": "go",
+    "url": "https://github.com/gorse-io/goat/archive/refs/tags/v0.2.0.zip",
+    "hash": "ed6b21ceea2ee65d4015d0277f7959560a3003947e10d9f4864580dc5af4a1e5",
+    "extract_dir": "goat-0.2.0",
+    "installer": {
+        "script": [
+            "Push-Location $dir",
+            "go build -o goat.exe .",
+            "Pop-Location"
+        ]
+    },
+    "bin": "goat.exe",
+    "notes": "GoAT requires LLVM and MinGW to translate C code on Windows.",
+    "checkver": {
+        "github": "https://github.com/gorse-io/goat"
+    },
+    "autoupdate": {
+        "url": "https://github.com/gorse-io/goat/archive/refs/tags/v$version.zip",
+        "extract_dir": "goat-$version"
+    }
+}
