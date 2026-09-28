@@ -1,12 +1,12 @@
 {
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "Go assembly transpiler for C programming languages.",
     "homepage": "https://github.com/gorse-io/goat",
     "license": "Apache-2.0",
     "depends": "go",
-    "url": "https://github.com/gorse-io/goat/archive/refs/tags/v0.2.1.zip",
-    "hash": "bc3903ed3ae507534797e92342aaa0360eccdc4b44c74ea1c060df586d297c3f",
-    "extract_dir": "goat-0.2.1",
+    "url": "https://github.com/gorse-io/goat/archive/refs/tags/v0.2.2.zip",
+    "hash": "92af9067f80fd44d3164b24e46047806a1e4595d54149852dc8a536158195fd1",
+    "extract_dir": "goat-0.2.2",
     "installer": {
         "script": [
             "Push-Location $dir",
