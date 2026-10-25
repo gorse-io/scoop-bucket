@@ -10,8 +10,8 @@ scoop install gorse-cli
 ## Automatic updates
 
 After a stable `gorse-io/cli` release has uploaded its binaries, its release
-workflow sends a `gorse-cli-release` repository dispatch to this repository.
-Stable `gorse-io/goat` releases send a `goat-release` dispatch. GoAT is built from
+workflow sends a `release` repository dispatch to this repository.
+Stable `gorse-io/goat` releases also send a `release` dispatch. GoAT is built from
 the tag's source archive during Scoop installation, so no binary upload is needed.
 The Excavator workflow uses `ScoopInstaller/GithubActions` to check the bucket's
 manifests and commit available updates, including download URLs and SHA256 hashes,
