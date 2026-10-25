@@ -1,0 +1,24 @@
+name: Excavator
+
+on:
+  repository_dispatch:
+    types: [release]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: excavator
+  cancel-in-progress: false
+
+jobs:
+  excavate:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Update manifests
+        uses: ScoopInstaller/GithubActions@5bceeda181721d9d10a18fdcc3ddca6f33467ae6
+        env:
+          SKIP_UPDATED: 1
+          THROW_ERROR: 1
